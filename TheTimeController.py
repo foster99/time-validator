@@ -7,9 +7,9 @@ class Day:
         self.duration = Clock.timeSum(d1.duration,d2.duration)
 
     def __str__(self):
-        return  "| "  + str(self.entry_1)  + " ~ " + str(self.exit_1) + \
+        return  "|| "  + str(self.entry_1)  + " ~ " + str(self.exit_1) + \
                 " | "  + str(self.entry_2)  + " ~ " + str(self.exit_2) + \
-                " | " + str(self.duration) + " |"
+                " | " + str(self.duration) + " ||"
 
 class Duration:
     def __init__(self,c1,c2):
@@ -81,9 +81,9 @@ class Chart:
 
     def __str__(self):
 
-        bound = "----------------------------------------------\n"
-        title = "| entry1 ~ exit1  | entry2 ~ exit2  | Total  |\n"
-        line  = "|-----------------+-----------------+--------|\n"
+        bound = "================================================\n"
+        title = "|| entry1 ~ exit1  | entry2 ~ exit2  | Total  ||\n"
+        line  = "||-----------------+-----------------+--------||\n"
 
         body = line.join([str(day) + "\n" for day in self.durations])
 
